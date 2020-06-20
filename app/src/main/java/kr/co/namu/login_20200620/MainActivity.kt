@@ -11,11 +11,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         loginBtn.setOnClickListener {
-            val inputId = idEdt.text
-            val inputPw = pwEdt.text
-            if(inputId.toString() == "admin" && inputPw.toString() == "qwer"){
+//            입력한 이메일, 비밀번호 가져오기
+            val inputId = idEdt.text.toString()
+            val inputPw = pwEdt.text.toString()
+            if(inputId == "admin" && inputPw == "qwer"){
                 Toast.makeText(this, "관리자입니다.", Toast.LENGTH_SHORT).show()
-
+            }
+            else{
+                Toast.makeText(this,"로그인에 실패했습니다.", Toast.LENGTH_SHORT).show()
             }
             }
         }
